@@ -40,19 +40,8 @@ h1{
    font-size: 40px;
 }
 
-.left{
-    width: 70%;
-    border: 5px solid blue;
-}
-
-.right{
-    width: 30%;
-    border: 5px solid red; 
-}
-
-li{
-    list-style: none;
-    font-size: 15px;
+table{
+    text-align: center;
 }
 
 footer{
