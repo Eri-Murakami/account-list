@@ -24,7 +24,7 @@
          </header>
         
              <h1>アカウント一覧画面</h1>
-      <!--   <form method="post"action="account list insert.php">-->
+         <form method="post"action="account list insert.php">
     
             <table border="1" cellspacing="0" cellpadding="5" align="center">
                 <tr bgcolor="#d3d3d3">
@@ -46,15 +46,17 @@
                 mb_internal_encoding("utf8");
                 $pdo = new PDO("mysql:dbname=account;host=localhost;","root","");
                 $stmt = $pdo->query("select * from account");
-        
+                ?>
+                
+                <?php
                   while($row = $stmt->fetch()){
                     echo $row['last_name'];
                     }
                 ?>
                 
-                <!--<tr>
-                    <td></td>
-                    <td><?php foreach($stmt as $row){echo $row['last_name'];}?></td>"
+                <tr>
+                   <td></td>
+                    <td><?php foreach($stmt as $row){echo $row['last_name'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['first_name'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['last_name2'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['first_name2'];}?></td>
@@ -74,6 +76,5 @@
         <footer>
             Copyright D.I.works｜ D.I blog is the one which provides A to Z about programming
         </footer>
-       <!-- </form>-->
      </body>
   </html>
