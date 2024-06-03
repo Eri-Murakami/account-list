@@ -4,7 +4,7 @@
        
         <meta charset="UTF-8">
         <title>アカウント一覧画面</title>
-        <link rel="stylesheet"type="text/css"href="diblog%20style%20.css">
+        <link rel="stylesheet"type="text/css"href="style%20.css">
     
     </head>
     
@@ -19,12 +19,12 @@
             <li>問い合わせ</li>
             <li>その他</li>
             <li> <a href="home%20index.html">アカウント登録</a></li>
-            <li> <a href="account%20list%20index%20.html">アカウント一覧</a></li>
+            <li> <a href="index%20.php">アカウント一覧</a></li>
             </ul>
          </header>
         
              <h1>アカウント一覧画面</h1>
-      <!--   <form method="post"action="account list insert.php">-->
+      <!--   <form method="post"action="insert.php">-->
     
             <table border="1" cellspacing="0" cellpadding="5" align="center">
                 <tr bgcolor="#d3d3d3">
@@ -61,19 +61,18 @@
                     <td><?php foreach($stmt as $row){echo $row['mail'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['sex'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['account'];}?></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php foreach($stmt as $row){echo $row['times'];}?></td>
+                    <td><?php foreach($stmt as $row){echo $row['datet'];}?></td>
                     <td> <input type="submit"class="button1"value="更新">
                          <input type="submit"class="button2"value="削除">
                     </td>
                 </tr>-->
        
         </table>
-        
+         <!-- </form>-->
         <footer>
             Copyright D.I.works｜ D.I blog is the one which provides A to Z about programming
         </footer>
-       <!-- </form>-->
+      
      </body>
   </html>
